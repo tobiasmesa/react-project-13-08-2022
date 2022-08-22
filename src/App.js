@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <>
-    <h1>
-      "Hola Mundo!"
-    </h1>
-    </>
+    <Fragment>
+      <NavBar/>
+    </Fragment>
   );
 }
 
