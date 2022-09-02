@@ -1,0 +1,45 @@
+[
+    {
+        "id": 0,
+        "name": "Joystick PS4 - Black Red",
+        "price": "$5.000",
+        "img": "./images/joystick-ps4.png" 
+      }, {
+        "id": 1,
+        "name": "Monitor Samsung 27''",
+        "price": "$3.000",
+        "img": "./images/monitor-samsung.png" 
+      }, 
+      {
+        "id": 2,
+        "name": "Mouse Logitech",
+        "price": "$1.000",
+        "img": "./images/mouse-logitech.png" 
+      }, 
+      {
+        "id": 3,
+        "name": "Netbook Asus Pro",
+        "price": "$130.000",
+        "img": "./images/netbook-asus.png" 
+      },
+      {
+        "id": 4,
+        "name": "Router TP-LINK",
+        "price": "$4.300",
+        "img": "./images/router-tplink.png" 
+      },
+      {
+        "id": 5,
+        "name": "Smart TV 30'' Samsung",
+        "price": "$123.000",
+        "img": "./images/smarttv-vestel.png" 
+      },
+      {
+        "id": 6,
+        "name": "Samsung Galaxy S9",
+        "price": "$120.000",
+        "img": "./images/samsung-s9.png" 
+      }
+]
+    
+ 
