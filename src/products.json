@@ -11,12 +11,6 @@
         "img": "./images/monitor-samsung.png" 
       }, 
       {
-        "id": 2,
-        "name": "Mouse Logitech",
-        "price": "$1.000",
-        "img": "./images/mouse-logitech.png" 
-      }, 
-      {
         "id": 3,
         "name": "Netbook Asus Pro",
         "price": "$130.000",
