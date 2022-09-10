@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import productsJson from "../products.json";
 import ItemList from "./ItemList"
 
 
-function ItemListContainer({ children }) {
-  const [products, setProducts] = useState([]);
+function ItemListContainer() {
+
+const { category } = useParams();
+
+const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = (data, time) =>
@@ -20,11 +24,11 @@ function ItemListContainer({ children }) {
       });
 
     getProducts(productsJson, 3000)
-      .then((res) => {
-        setProducts(res);
+      .then((res) => { 
+        setProducts((category)? res.filter((product) => product.category == category):res);
       })
       .catch((err) => console.log(err, "No hay productos!"));
-  }, []);
+  }, [category]);
 
   return (
     <div>
