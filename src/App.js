@@ -1,17 +1,18 @@
-import { Fragment } from "react";
 import "./App.css";
-import ItemCount from "./components/ItemCount";
 import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer"
 import NavBar from "./components/NavBar";
+import {Routes, BrowserRouter, Route} from "react-router-dom"
 
 function App() {
   return (
-    <Fragment>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer  className="ml-[20%]">
-        <ItemCount stock={3}/>
-      </ItemListContainer>
-    </Fragment>
+      <Routes>
+        <Route path='/' element={<ItemListContainer />} />
+        <Route path='/item/:id' element={<ItemDetailContainer/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

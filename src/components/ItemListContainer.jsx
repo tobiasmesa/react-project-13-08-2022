@@ -19,7 +19,7 @@ function ItemListContainer({ children }) {
         }, time);
       });
 
-    getProducts(productsJson, 4000)
+    getProducts(productsJson, 3000)
       .then((res) => {
         setProducts(res);
       })
@@ -28,7 +28,6 @@ function ItemListContainer({ children }) {
 
   return (
     <div>
-      <h1>Catalogo</h1>
       <ItemList products={products}/>
     </div>
   );

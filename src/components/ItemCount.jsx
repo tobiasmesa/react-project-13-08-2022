@@ -13,7 +13,7 @@ const ItemCount = ({stock, initial = 1, onAdd}) => {
   };
 
   return (
-    <div className="ml-[45%]">
+    <div className="">
       <div className="flex w-52 h-6 rounded bg-[#007CBE]">
         <button className="m-auto text-white" onClick={subProduct}>
           <BsDashLg />
