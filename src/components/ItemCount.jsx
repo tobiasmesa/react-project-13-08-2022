@@ -15,18 +15,18 @@ const ItemCount = ({stock, initial = 1, onAdd}) => {
   return (
     <div className="">
       <div className="flex w-52 h-6 rounded bg-[#007CBE]">
-        <button className="m-auto text-white" onClick={subProduct}>
+        <button className="m-auto text-white" onClick={subProduct} disabled={counter <= 1}>
           <BsDashLg />
         </button>
         <div className="w-[158px] m-auto bg-white font-light text-center">
           {counter}
         </div>
-        <button className="m-auto text-white" onClick={addProduct}>
+        <button className="m-auto text-white" onClick={addProduct} disabled={counter >= stock}>
           <BsPlusLg />
         </button>
       </div>
       <div>
-        <button className="w-52 mt-5 h-6 text-center text-md font-light text-white bg-[#007CBE] rounded" onClick={stock !== 0 ? onAdd = counter : onAdd = 0}>
+        <button className="w-52 mt-5 h-6 text-center text-md font-light text-white bg-[#007CBE] rounded"  disabled={stock <= 0} onClick={() => onAdd(counter)}>
           Add to cart
         </button>
       </div>
