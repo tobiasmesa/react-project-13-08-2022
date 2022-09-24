@@ -17,12 +17,12 @@ const ItemDetailContainer = () => {
   const getItem = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        console.log(id)
-        resolve(productsJson.find(p => p.id == id));
+        resolve(productsJson.find(p => p.id === id));
         reject("Error");
       }, 2000);
     });
   };
+
 
   return <ItemDetail {...item} />;
 };
