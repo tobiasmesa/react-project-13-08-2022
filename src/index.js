@@ -11,12 +11,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCZoLGl0JcDmlAAIXVEgZFunMnXdB_gOFM",
-  authDomain: "letcommerce-coderhouse.firebaseapp.com",
-  projectId: "letcommerce-coderhouse",
-  storageBucket: "letcommerce-coderhouse.appspot.com",
-  messagingSenderId: "116526249948",
-  appId: "1:116526249948:web:b5d7355f7de692f10b8119"
+
 };
 
 // Initialize Firebase
