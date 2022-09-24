@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Item = (product) => {
   return (
-    <Link to={"/item/"+product.id}>
+    <Link to={"/item/"+ product.id}>
       <div className=" bg-white border w-72 h-96 m-[5%] grid justify-items-center rounded-xl shadow-2xl">
         <img
           className="p-auto h-48"

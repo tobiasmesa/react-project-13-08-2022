@@ -18,6 +18,7 @@ const ItemDetail = ( item ) => {
       addProduct(item, quantity);
   }
 
+
   return (
 
     <div className="m-auto border grid justify-items-center">

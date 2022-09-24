@@ -1,30 +1,28 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import productsJson from "../products.json";
+
 import { useParams } from "react-router-dom";
+import {  getDoc, getFirestore, doc } from "firebase/firestore";
+
 
 const ItemDetailContainer = () => {
 
-  const [item, setItem] = useState({});
+  const [items, setItem] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    getItem().then((data) => {
-      setItem(data);
-    });
-  }, []);
+    const db = getFirestore(); // LLAMADA A LA DB
+    const productsCollection = doc(db, "items", id); // QUERY A LA DB PICKEAR LA COLECCTION Products
+    getDoc(productsCollection)
+    .then((res) => setItem(res.data()))
+    .catch((err)=>
+    {
+      return( `Error ${err}`);
+    })
+    
+  }, [id]);
 
-  const getItem = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(productsJson.find(p => p.id === id));
-        reject("Error");
-      }, 2000);
-    });
-  };
-
-
-  return <ItemDetail {...item} />;
+  return <ItemDetail {...items} />;
 };
 
 export default ItemDetailContainer;
