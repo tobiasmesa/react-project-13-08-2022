@@ -12,7 +12,7 @@ const CartWidget = () => {
     <Link to={"/cart"}>
     <div className="pr-10 flex">
       <BsCart className="m-auto"></BsCart>
-      <div className="pl-4"> Cart {totalProducts() == 0 || totalProducts() }  </div>
+      <div className="pl-4"> Cart {totalProducts() === 0 || totalProducts() }  </div>
     </div>
     </Link>
   );
