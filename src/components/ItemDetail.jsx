@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-
 const ItemDetail = ( item ) => {
+  
   const { name, price, thumbnail, stock, description} = item;
 
   const [cart, setCart] = useState(false);
@@ -14,7 +14,7 @@ const ItemDetail = ( item ) => {
   const {addProduct} = useCartContext();
 
   function onAdd(quantity) {
-    setCart(true);
+      setCart(quantity);
       addProduct(item, quantity);
   }
 
