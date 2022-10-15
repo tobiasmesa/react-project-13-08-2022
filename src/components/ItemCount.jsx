@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { BsPlusLg, BsDashLg } from "react-icons/bs";
 
+
+
 const ItemCount = ({stock, initial = 1, onAdd}) => {
   const [counter, setCounter] = useState(initial);
 
