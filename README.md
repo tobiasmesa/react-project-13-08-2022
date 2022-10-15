@@ -1,4 +1,4 @@
-# MiTienda
+# LetCommerce
 
 Ecommerce creado para el curso de react de CoderHouse
 
